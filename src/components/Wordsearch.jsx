@@ -1,5 +1,5 @@
 import React from "react";
-import word from "./word.jsx";
+import word from "./Word.jsx";
 
 const words = [
     {text: "About Me", link: "/about"},
