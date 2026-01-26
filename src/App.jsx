@@ -1,5 +1,5 @@
 import React from "react";
-import wordsearch from "./components/Wordsearch.jsx";
+import WordSearch from "./components/WordSearch.jsx";
 
 function App() {
     return (
@@ -8,8 +8,9 @@ function App() {
                 <h1>Welcome to My Portfolio</h1>
                 <p>Hover over the words to explore!</p>
             </header>
+
             <main style={styles.main}>
-                <wordsearch/>
+                <WordSearch />
             </main>
         </div>
     );
