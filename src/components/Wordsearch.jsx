@@ -2,9 +2,9 @@ import { useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
 const WORDS = [
-    { word: "PROJECTS", type: "projects", positions: [[0, 2],[0,3],[0,4],[0,5],[0,6],[0,7],[0,8],[0,9]] },
     { word: "ABOUT ME", type: "about", positions: [[1,0],[1,1],[1,2],[1,3],[1,4],[1,5],[1,6],[1,7]] },
     { word: "CONTACT", type: "contact", positions: [[3,0],[3,1],[3,2],[3,3],[3,4],[3,5],[3,6]] },
+    { word: "PROJECTS", type: "projects", positions: [[0,2],[0,3],[0,4],[0,5],[0,6],[0,7],[0,8],[0,9]] },
     { word: "SKILLS", type: "skills", positions: [[5,2],[5,3],[5,4],[5,5],[5,6],[5,7]] },
 ];
 
@@ -36,7 +36,6 @@ const WordSearch = () => {
     const navigate = useNavigate();
     const [grid] = useState(createGrid);
     const [hoveredWord, setHoveredWord] = useState(null);
-    const [isBoxHovered, setIsBoxHovered] = useState(false); // track hover for the page box
 
     const handleMouseEnter = useCallback((wordType) => wordType && setHoveredWord(wordType), []);
     const handleMouseLeave = useCallback(() => setHoveredWord(null), []);
@@ -62,10 +61,10 @@ const WordSearch = () => {
             cursor: cell.wordType ? "pointer" : "default",
             transition: "all 0.3s",
             userSelect: "none",
-            color: "#6B0D0D",
+            color: "#710014",
         };
         if(cell.wordType && hoveredWord === cell.wordType){
-            base.backgroundColor = "#6B0D0D20";
+            base.backgroundColor = "#71001420";
             base.borderRadius = "4px";
         }
         return base;
@@ -73,17 +72,16 @@ const WordSearch = () => {
 
     const pageBoxStyle = {
         display: "inline-block",
-        padding: "1.5rem",
+        padding: "2rem",
         borderRadius: "12px",
-        backdropFilter: "blur(6px)",
-        border: "1px solid #6B0D0D33",
+        backdropFilter: "blur(4px)",
+        border: "1px solid #71001433",
+        backgroundColor: "#F2EFE6",  // Ivory white
         transition: "all 0.3s",
-        boxShadow: isBoxHovered
-            ? "0 12px 30px rgba(0,0,0,0.2)"
-            : "0 6px 15px rgba(0,0,0,0.1)",
-        transform: isBoxHovered ? "translateY(-4px)" : "translateY(0)",
-        cursor: "default",
+        boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
     };
+
+    const wordList = WORDS.map(w => w.word).sort();
 
     return (
         <div style={{
@@ -93,20 +91,16 @@ const WordSearch = () => {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "#F7F3EE",
+            backgroundColor: "#F2F1ED",
             padding: "2rem",
             boxSizing: "border-box",
         }}>
             <div style={{ textAlign: "center", marginBottom: "2rem" }}>
-                <h1 style={{ fontSize: "3rem", marginBottom: "0.5rem", fontFamily: "Times, serif", color:"#6B0D0D" }}>Lavanya Kamble</h1>
-                <p style={{color:"#6B0D0D" }}>Hover over the hidden words to navigate</p>
+                <h1 style={{ fontSize: "3rem", marginBottom: "0.5rem", fontFamily: "Georgia, serif", color:"#710014" }}>Lavanya Kamble</h1>
+                <p style={{color:"#161616", fontFamily: "'Poppins', sans-serif"}}>Hover over the hidden words to navigate</p>
             </div>
 
-            <div
-                style={pageBoxStyle}
-                onMouseEnter={() => setIsBoxHovered(true)}
-                onMouseLeave={() => setIsBoxHovered(false)}
-            >
+            <div style={pageBoxStyle}>
                 {grid.map((row,rowIdx) => (
                     <div key={rowIdx} style={{ display: "flex", gap: "0.25rem" }}>
                         {row.map((cell,colIdx) => (
@@ -122,6 +116,39 @@ const WordSearch = () => {
                         ))}
                     </div>
                 ))}
+
+                <div style={{
+                    marginTop: "1.5rem",
+                    display: "flex",
+                    gap: "1.5rem",
+                    justifyContent: "center",
+                    flexWrap: "wrap",
+                    fontSize: "1rem",
+                    fontWeight: "bold",
+                    color: "#710014",
+                }}>
+                    {wordList.map(word => (
+                        <span
+                            key={word}
+                            style={{
+                                cursor: "default",
+                                transition: "all 0.3s",
+                                textDecoration: hoveredWord && WORDS.find(w => w.word === word).type === hoveredWord ? "line-through" : "none",
+                            }}
+                        >
+                            {word}
+                        </span>
+                    ))}
+                </div>
+
+                <div style={{
+                    marginTop: "1.5rem",
+                    textAlign: "center",
+                    fontSize: "0.85rem",
+                    color: "#161616AA",
+                }}>
+                    Issue #19 • Lavanya Kamble Portfolio
+                </div>
             </div>
         </div>
     );
