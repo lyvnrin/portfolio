@@ -48,8 +48,6 @@ const WordSearch = () => {
             skills: "#",
         };
 
-
-
         navigate(routes[wordType]);
     }, [navigate]);
 
@@ -67,7 +65,7 @@ const WordSearch = () => {
             color: '#6B0D0D',
         };
         if(cell.wordType && hoveredWord === cell.wordType){
-            base.backgroundColor = '#6B0D0D22';
+            base.backgroundColor = '#6B0D0D20';
             base.borderRadius = '4px';
         }
         return base;
@@ -76,7 +74,7 @@ const WordSearch = () => {
     return (
         <div style={{
             minHeight: '100vh',
-            width: '',
+            width: '100vw',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -86,8 +84,8 @@ const WordSearch = () => {
             boxSizing: 'border-box',
         }}>
             <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                <h1 style={{ fontSize: '3rem', marginBottom: '0.5rem', fontFamily: 'Times, serif' }}>Lavanya Kamble</h1>
-                <p>Hover over the hidden words to navigate</p>
+                <h1 style={{ fontSize: '3rem', marginBottom: '0.5rem', fontFamily: 'Times, serif', color:"#6B0D0D" }}>Lavanya Kamble</h1>
+                <p style={{color:"#6B0D0D" }}>Hover over the hidden words to navigate</p>
             </div>
 
             <div style={{
