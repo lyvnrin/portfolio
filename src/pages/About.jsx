@@ -65,7 +65,7 @@ const styles = {
     title: {
         fontSize: "2rem",
         fontFamily: "Georgia, serif",
-        letterSpacing: "0.1rem",
+        letterSpacing: "0.2rem",
         margin: "1rem 0",
         alignSelf: "center",
         color: "#710014",
