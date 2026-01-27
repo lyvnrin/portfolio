@@ -5,15 +5,14 @@ const About = () => {
         <div style={styles.container}>
             <div style={styles.pageBox}>
                 <Link to="/" style={styles.backLink}>
-                    Back to puzzle
+                    🔙 Back to puzzle
                 </Link>
 
                 <h1 style={styles.title}>About Me</h1>
 
                 <div style={styles.content}>
                     <p>
-                        Hello! I'm a creative developer passionate about building unique digital experiences
-                        that blur the line between art and functionality.
+                        Hello! I'm a second-year Computer Science student with a passion for web development tools and data analytics!
                     </p>
                     <p>
                         With a background in both design and development, I love crafting interfaces
@@ -31,8 +30,8 @@ const About = () => {
 
 const styles = {
     container: {
-        width: "100vw",         // full viewport width
-        minHeight: "100vh",     // full viewport height
+        width: "100vw",
+        minHeight: "100vh",
         padding: "2rem",
         fontFamily: "system-ui, sans-serif",
         backgroundColor: "#F7F3EE",
@@ -44,31 +43,47 @@ const styles = {
     },
     pageBox: {
         width: "100%",
-        maxWidth: "700px",        // not too wide on large screens
-        minWidth: "320px",        // ensures it's readable on smaller screens
+        maxWidth: "700px",
+        minWidth: "320px",
         backgroundColor: "#FFF8DC",
         padding: "2rem",
-        borderRadius: "8px",
+        borderRadius: "12px",
         boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
         display: "flex",
         flexDirection: "column",
         alignItems: "flex-start",
         boxSizing: "border-box",
+        transition: "all 0.3s",
     },
     backLink: {
-        marginBottom: "1rem",
-        textDecoration: "underline",
+        marginBottom: "1.5rem",
+        textDecoration: "none",
         cursor: "pointer",
         color: "#6B0D0D",
         fontSize: "1rem",
+        fontWeight: 600,
+        padding: "0.5rem 1rem",
+        borderRadius: "6px",
+        backgroundColor: "#FDEBCF",
+        boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+        transition: "all 0.2s",
+        alignSelf: "flex-start",
+    },
+    backLinkHover: {
+        backgroundColor: "#FBD28B",
+        boxShadow: "0 6px 15px rgba(0,0,0,0.15)",
+        transform: "translateY(-2px)",
     },
     title: {
         fontSize: "2rem",
+        fontFamily: "Times, serif",
+        letterSpacing: "0.25rem",
         margin: "1rem 0",
         alignSelf: "center",
     },
     content: {
         width: "100%",
+        fontFamily: "Inter, sans-serif",
         lineHeight: "1.6",
         fontSize: "1.125rem",
         color: "#333",
