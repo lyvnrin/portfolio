@@ -41,7 +41,15 @@ const WordSearch = () => {
     const handleMouseLeave = useCallback(() => setHoveredWord(null), []);
     const handleClick = useCallback((wordType) => {
         if (!wordType) return;
-        const routes = { about: '/about', projects: '/projects', contact: '/contact', skills: '/skills' };
+        const routes = {
+            about: "/about",
+            projects: "#",
+            contact: "#",
+            skills: "#",
+        };
+
+
+
         navigate(routes[wordType]);
     }, [navigate]);
 
@@ -68,17 +76,17 @@ const WordSearch = () => {
     return (
         <div style={{
             minHeight: '100vh',
-            width: '100%',
+            width: '',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
             backgroundColor: '#F7F3EE',
-            padding: '2rem',
+            padding: '1.8rem',
             boxSizing: 'border-box',
         }}>
             <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                <h1 style={{ fontSize: '3rem', marginBottom: '0.5rem', fontFamily: 'Space Grotesk, sans-serif' }}>Lav K</h1>
+                <h1 style={{ fontSize: '3rem', marginBottom: '0.5rem', fontFamily: 'Times, serif' }}>Lavanya Kamble</h1>
                 <p>Hover over the hidden words to navigate</p>
             </div>
 
