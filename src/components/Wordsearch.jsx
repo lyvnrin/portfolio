@@ -91,13 +91,13 @@ const WordSearch = () => {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "#F2F1ED",
+            backgroundColor: "#710014",
             padding: "2rem",
             boxSizing: "border-box",
         }}>
             <div style={{ textAlign: "center", marginBottom: "2rem" }}>
-                <h1 style={{ fontSize: "3rem", marginBottom: "0.5rem", fontFamily: "Georgia, serif", color:"#710014" }}>Lavanya Kamble</h1>
-                <p style={{color:"#161616", fontFamily: "'Poppins', sans-serif"}}>Hover over the hidden words to navigate</p>
+                <h1 style={{ fontSize: "3rem", marginBottom: "0.5rem", fontFamily: "Georgia, serif", color:"#F2EFE6" }}>Lavanya Kamble</h1>
+                <p style={{color:"#F2EFE6", fontFamily: "'Poppins', sans-serif"}}>Hover over the hidden words to navigate</p>
             </div>
 
             <div style={pageBoxStyle}>
@@ -125,7 +125,7 @@ const WordSearch = () => {
                     flexWrap: "wrap",
                     fontSize: "1rem",
                     fontWeight: "bold",
-                    color: "#710014",
+                    color: "#161616",
                 }}>
                     {wordList.map(word => (
                         <span

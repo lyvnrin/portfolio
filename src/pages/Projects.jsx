@@ -1,23 +1,24 @@
 import { Link } from "react-router-dom";
-import { ExternalLink, Folder } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const projects = [
     {
-        title: "Interactive Portfolio",
-        description: "A word search navigation experience (you're looking at it!)",
-        tags: ["React", "UI Design", "Routing"],
+        title: "Wordsearch Portfolio",
+        description: "A word search portfolio website experience (you're looking at it!)",
+        tags: ["React", "Frontend", "Routing"],
         featured: true,
     },
     {
-        title: "Project Alpha",
-        description: "A creative web application with immersive animations",
-        tags: ["Three.js", "GSAP", "WebGL"],
+        title: "Valora",
+        description:
+            "(Frontend) A financial chatbot project providing economic insights at the touch of your fingertips.",
+        tags: ["React", "ML", "FinTech"],
         featured: false,
     },
     {
-        title: "Project Beta",
+        title: "Project C",
         description: "Full-stack application with real-time features",
-        tags: ["Next.js", "PostgreSQL", "WebSockets"],
+        tags: ["1", "2", "3"],
         featured: false,
     },
 ];
@@ -29,12 +30,6 @@ const Projects = () => {
                 <Link to="/" style={styles.backLink}>
                     ← Back to puzzle
                 </Link>
-
-                <div style={styles.header}>
-                    <Folder size={16} style={styles.iconMuted} />
-                    <span style={styles.kicker}>Selected Work</span>
-                    <Folder size={16} style={styles.iconMuted} />
-                </div>
 
                 <h1 style={styles.title}>Projects</h1>
 
@@ -48,17 +43,32 @@ const Projects = () => {
                                     ? "#71001466"
                                     : "#71001422",
                             }}
+                            onMouseEnter={(e) => {
+                                e.currentTarget.style.transform =
+                                    styles.cardHover.transform;
+                                e.currentTarget.style.boxShadow =
+                                    styles.cardHover.boxShadow;
+                            }}
+                            onMouseLeave={(e) => {
+                                e.currentTarget.style.transform = "translateY(0)";
+                                e.currentTarget.style.boxShadow = "none";
+                            }}
                         >
-                            {project.featured && (
-                                <span style={styles.featured}>Featured</span>
-                            )}
+                            {/*{project.featured && (*/}
+                            {/*    <span style={styles.featured}>Featured</span>*/}
+                            {/*)}*/}
 
                             <div style={styles.cardHeader}>
                                 <h3 style={styles.cardTitle}>{project.title}</h3>
-                                <ExternalLink size={18} style={styles.externalIcon} />
+                                <ExternalLink
+                                    size={18}
+                                    style={styles.externalIcon}
+                                />
                             </div>
 
-                            <p style={styles.description}>{project.description}</p>
+                            <p style={styles.description}>
+                                {project.description}
+                            </p>
 
                             <div style={styles.tags}>
                                 {project.tags.map((tag, i) => (
@@ -71,9 +81,7 @@ const Projects = () => {
                     ))}
                 </div>
 
-                <p style={styles.footerNote}>
-                    More projects coming soon…
-                </p>
+                <p style={styles.footerNote}>More projects coming soon…</p>
             </div>
         </div>
     );
@@ -93,7 +101,7 @@ const styles = {
     inner: {
         width: "100%",
         maxWidth: "1000px",
-        backgroundColor: "#F9F8F4",
+        backgroundColor: "#F2F1ED",
         padding: "2.5rem",
         borderRadius: "12px",
         boxShadow: "0 10px 25px rgba(0,0,0,0.15)",
@@ -105,23 +113,6 @@ const styles = {
         textDecoration: "underline",
         marginBottom: "1.5rem",
         display: "inline-block",
-    },
-    header: {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        gap: "0.5rem",
-        marginBottom: "0.5rem",
-    },
-    kicker: {
-        fontSize: "0.75rem",
-        letterSpacing: "0.2em",
-        textTransform: "uppercase",
-        color: "#16161699",
-        fontFamily: "Inter, sans-serif",
-    },
-    iconMuted: {
-        color: "#71001466",
     },
     title: {
         textAlign: "center",
@@ -142,6 +133,10 @@ const styles = {
         border: "1px solid",
         transition: "transform 0.25s ease, box-shadow 0.25s ease",
     },
+    cardHover: {
+        transform: "translateY(-6px)",
+        boxShadow: "0 12px 30px rgba(0,0,0,0.18)",
+    },
     featured: {
         fontSize: "0.7rem",
         textTransform: "uppercase",
@@ -149,6 +144,7 @@ const styles = {
         color: "#710014",
         marginBottom: "0.5rem",
         display: "inline-block",
+        fontFamily: "Inter, sans-serif",
     },
     cardHeader: {
         display: "flex",
