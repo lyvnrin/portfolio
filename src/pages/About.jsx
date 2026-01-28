@@ -35,7 +35,7 @@ const styles = {
         width: "100vw",
         minHeight: "100vh",
         padding: "2rem",
-        backgroundColor: "#F2F1ED",
+        backgroundColor: "#710014",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -45,7 +45,7 @@ const styles = {
         width: "100%",
         maxWidth: "700px",
         minWidth: "320px",
-        backgroundColor: "#F2EFE6",  // Ivory white
+        backgroundColor: "#F2EFE6",
         padding: "2rem",
         borderRadius: "12px",
         boxShadow: "0 8px 20px rgba(0,0,0,0.15)",

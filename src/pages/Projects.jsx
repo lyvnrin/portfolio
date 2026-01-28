@@ -91,7 +91,7 @@ const styles = {
     container: {
         minHeight: "100vh",
         width: "100vw",
-        backgroundColor: "#F2F1ED",
+        backgroundColor: "#710014",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
