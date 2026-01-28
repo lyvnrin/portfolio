@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ExternalLink, Folder } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const projects = [
     {
