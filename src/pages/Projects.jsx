@@ -1,86 +1,200 @@
-import { Link } from 'react-router-dom';
-import { ArrowLeft, ExternalLink, Folder } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { ExternalLink, Folder } from "lucide-react";
 
 const projects = [
     {
-        title: 'Interactive Portfolio',
-        description: 'A word search navigation experience (you\'re looking at it!)',
-        tags: ['React', 'TypeScript', 'Tailwind'],
+        title: "Wordsearch Inspired Portfolio",
+        description: "A word search navigation experience (you're looking at it!)",
+        tags: ["React", "Web Design", "Routing"],
         featured: true,
     },
     {
-        title: 'Project Alpha',
-        description: 'A creative web application with immersive animations',
-        tags: ['Three.js', 'GSAP', 'WebGL'],
+        title: "Valora",
+        description: "A financial chatbot project providing economic insights at the touch of your fingertips.",
+        tags: ["React", "Ml", "AI"],
         featured: false,
     },
     {
-        title: 'Project Beta',
-        description: 'Full-stack application with real-time features',
-        tags: ['Next.js', 'PostgreSQL', 'WebSockets'],
+        title: "Project C",
+        description: "Full-stack application with real-time features",
+        tags: ["1", "2", "3"],
         featured: false,
     },
 ];
 
 const Projects = () => {
     return (
-        <div className="page-container flex flex-col items-center">
-            <div className="w-full max-w-4xl animate-fade-in">
-                <Link to="/" className="back-link">
-                    {/*<ArrowLeft size={20} />*/}
-                    Back to puzzle
+        <div style={styles.container}>
+            <div style={styles.inner}>
+                <Link to="/" style={styles.backLink}>
+                    ← Back to puzzle
                 </Link>
-            </div>
 
-            <div className="w-full max-w-4xl notepad-card animate-scale-in" style={{ animationDelay: '0.1s' }}>
-                <div className="flex items-center justify-center gap-2 mb-2">
-                    <Folder size={16} className="text-secondary/60" />
-                    <span className="text-xs uppercase tracking-widest text-muted-foreground">Selected Work</span>
-                    <Folder size={16} className="text-secondary/60" />
-                </div>
-                <h1 className="page-title text-secondary text-center">Projects</h1>
+                {/*<div style={styles.header}>*/}
+                {/*    <Folder size={16} style={styles.iconMuted} />*/}
+                {/*    <span style={styles.kicker}>Selected Work</span>*/}
+                {/*    <Folder size={16} style={styles.iconMuted} />*/}
+                {/*</div>*/}
 
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <h1 style={styles.title}>Projects</h1>
+
+                <div style={styles.grid}>
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className={`group bg-background/50 border rounded-xl p-6 hover:border-secondary/50 transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-lg ${
-                                project.featured ? 'border-secondary/30 ring-1 ring-secondary/10' : 'border-border'
-                            }`}
-                            style={{ animationDelay: `${index * 0.1}s` }}
+                            style={{
+                                ...styles.card,
+                                borderColor: project.featured
+                                    ? "#71001466"
+                                    : "#71001422",
+                            }}
                         >
                             {project.featured && (
-                                <span className="inline-block text-xs px-2 py-0.5 rounded-full bg-secondary/10 text-secondary mb-3">
-                  Featured
-                </span>
+                                <span style={styles.featured}>Featured</span>
                             )}
-                            <div className="flex items-start justify-between mb-4">
-                                <h3 className="text-xl font-semibold group-hover:text-secondary transition-colors" style={{ fontFamily: 'Lora, serif' }}>
-                                    {project.title}
-                                </h3>
-                                <ExternalLink size={18} className="text-muted-foreground group-hover:text-secondary transition-colors flex-shrink-0 ml-2" />
+
+                            <div style={styles.cardHeader}>
+                                <h3 style={styles.cardTitle}>{project.title}</h3>
+                                <ExternalLink size={18} style={styles.externalIcon} />
                             </div>
-                            <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{project.description}</p>
-                            <div className="flex flex-wrap gap-2">
-                                {project.tags.map((tag, tagIndex) => (
-                                    <span
-                                        key={tagIndex}
-                                        className="text-xs px-2.5 py-1 rounded-full bg-muted text-muted-foreground"
-                                    >
-                    {tag}
-                  </span>
+
+                            <p style={styles.description}>{project.description}</p>
+
+                            <div style={styles.tags}>
+                                {project.tags.map((tag, i) => (
+                                    <span key={i} style={styles.tag}>
+                                        {tag}
+                                    </span>
                                 ))}
                             </div>
                         </div>
                     ))}
                 </div>
 
-                <p className="text-center text-sm text-muted-foreground/60 mt-8 pt-6 border-t border-border">
-                    More projects coming soon...
+                <p style={styles.footerNote}>
+                    More projects coming soon…
                 </p>
             </div>
         </div>
     );
+};
+
+const styles = {
+    container: {
+        minHeight: "100vh",
+        width: "100vw",
+        backgroundColor: "#F2F1ED",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "2rem",
+        boxSizing: "border-box",
+    },
+    inner: {
+        width: "100%",
+        maxWidth: "1000px",
+        backgroundColor: "#F9F8F4",
+        padding: "2.5rem",
+        borderRadius: "12px",
+        boxShadow: "0 10px 25px rgba(0,0,0,0.15)",
+        boxSizing: "border-box",
+    },
+    backLink: {
+        fontFamily: "Inter, system-ui, sans-serif",
+        color: "#710014",
+        textDecoration: "underline",
+        marginBottom: "1.5rem",
+        display: "inline-block",
+    },
+    header: {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "0.5rem",
+        marginBottom: "0.5rem",
+    },
+    kicker: {
+        fontSize: "0.75rem",
+        letterSpacing: "0.2em",
+        textTransform: "uppercase",
+        color: "#16161699",
+        fontFamily: "Inter, sans-serif",
+    },
+    iconMuted: {
+        color: "#71001466",
+    },
+    title: {
+        textAlign: "center",
+        fontFamily: "Georgia, serif",
+        fontSize: "2.4rem",
+        color: "#710014",
+        marginBottom: "2rem",
+    },
+    grid: {
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+        gap: "1.5rem",
+    },
+    card: {
+        backgroundColor: "#F2F1ED",
+        padding: "1.5rem",
+        borderRadius: "12px",
+        border: "1px solid",
+        transition: "transform 0.25s ease, box-shadow 0.25s ease",
+    },
+    featured: {
+        fontSize: "0.7rem",
+        textTransform: "uppercase",
+        letterSpacing: "0.1em",
+        color: "#710014",
+        marginBottom: "0.5rem",
+        display: "inline-block",
+    },
+    cardHeader: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "flex-start",
+        gap: "0.5rem",
+        marginBottom: "0.5rem",
+    },
+    cardTitle: {
+        fontFamily: "Georgia, serif",
+        fontSize: "1.2rem",
+        color: "#161616",
+    },
+    externalIcon: {
+        color: "#16161666",
+        flexShrink: 0,
+    },
+    description: {
+        fontFamily: "Inter, sans-serif",
+        fontSize: "0.95rem",
+        lineHeight: "1.6",
+        color: "#161616",
+        marginBottom: "0.75rem",
+    },
+    tags: {
+        display: "flex",
+        flexWrap: "wrap",
+        gap: "0.5rem",
+    },
+    tag: {
+        fontSize: "0.7rem",
+        padding: "0.3rem 0.7rem",
+        borderRadius: "999px",
+        backgroundColor: "#71001415",
+        color: "#710014",
+        fontFamily: "Inter, sans-serif",
+    },
+    footerNote: {
+        textAlign: "center",
+        marginTop: "2.5rem",
+        paddingTop: "1.5rem",
+        borderTop: "1px solid #71001422",
+        fontSize: "0.85rem",
+        color: "#16161699",
+        fontFamily: "Inter, sans-serif",
+    },
 };
 
 export default Projects;
