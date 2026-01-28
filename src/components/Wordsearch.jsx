@@ -43,7 +43,7 @@ const WordSearch = () => {
         if (!wordType) return;
         const routes = {
             about: "/about",
-            projects: "#",
+            projects: "/projects",
             contact: "#",
             skills: "#",
         };
@@ -76,7 +76,7 @@ const WordSearch = () => {
         borderRadius: "12px",
         backdropFilter: "blur(4px)",
         border: "1px solid #71001433",
-        backgroundColor: "#F2EFE6",  // Ivory white
+        backgroundColor: "#F2EFE6",
         transition: "all 0.3s",
         boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
     };
@@ -147,7 +147,7 @@ const WordSearch = () => {
                     fontSize: "0.85rem",
                     color: "#161616AA",
                 }}>
-                    Issue #19 • Lavanya Kamble Portfolio
+                    Issue #19 • Portfolio
                 </div>
             </div>
         </div>
