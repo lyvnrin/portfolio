@@ -45,7 +45,7 @@ const WordSearch = () => {
             about: "/about",
             projects: "/projects",
             contact: "#",
-            skills: "#",
+            skills: "/skills",
         };
         navigate(routes[wordType]);
     }, [navigate]);
