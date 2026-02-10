@@ -24,7 +24,6 @@ const Skills = () => {
                 </Link>
 
                 <div style={styles.header}>
-                    <span style={styles.kicker}>What I Work With</span>
                     <h1 style={styles.title}>Skills</h1>
                 </div>
 
