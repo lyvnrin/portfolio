@@ -3,7 +3,7 @@ const projects = [
     cat: 'Fintech · 2025', title: 'Valora', stack: 'React · Python',
     desc: 'AI-powered financial chatbot delivering economic insights on demand. Includes dynamic charts of stock and revenue data across industries, filtered via dropdown. Contributed frontend.',
     href: null
-  }, 
+  },
   {
     cat: 'Full-stack · 2026', title: 'Oaxaca', stack: 'React · FastAPI · SQLite',
     desc: 'Restaurant management system with live order tracking, kitchen + waiter dashboards, and COGS analytics across a 5-sprint Scrum cycle. In Progress',
@@ -20,10 +20,10 @@ export default function Projects() {
   return (
     <section id="projects" style={{ padding: '2.5rem', borderTop: '0.5px solid #e0ddd8' }}>
       <p style={{ fontSize: '10px', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '1.25rem', fontWeight: 'bolder' }}>Projects</p>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0,1fr))', gap: '1rem' }}>
+      <div className="projects-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0,1fr))', gap: '1rem' }}>
         {projects.map(p => {
           const card = (
-            <div className="projects-gridr" style={{ border: '0.5px solid #e0ddd8', padding: '1.25rem', height: '100%' }}>
+            <div className="card-hover" style={{ border: '0.5px solid #e0ddd8', padding: '1.25rem', height: '100%' }}>
               <p style={{ fontSize: '10px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#bbb', marginBottom: '0.5rem' }}>{p.cat}</p>
               <h3 style={{ fontFamily: "'Palatino Linotype', Palatino, serif", fontSize: '1.05rem', fontWeight: 400, marginBottom: '0.35rem' }}>{p.title}</h3>
               <p style={{ fontSize: '10px', color: '#bbb', marginTop: '0.5rem' }}>{p.stack}</p>
