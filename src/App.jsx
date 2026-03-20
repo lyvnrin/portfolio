@@ -5,7 +5,7 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Cursor from './components/Cursor'
 
-const page = { maxWidth: '900px', margin: '0 auto', padding: '0 3rem' }
+const page = { maxWidth: '900px', margin: '0 auto', padding: '0 1.5rem' }
 
 export default function App() {
   return (

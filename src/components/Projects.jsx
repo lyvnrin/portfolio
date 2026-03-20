@@ -23,7 +23,7 @@ export default function Projects() {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0,1fr))', gap: '1rem' }}>
         {projects.map(p => {
           const card = (
-            <div className="card-hover" style={{ border: '0.5px solid #e0ddd8', padding: '1.25rem', height: '100%' }}>
+            <div className="projects-gridr" style={{ border: '0.5px solid #e0ddd8', padding: '1.25rem', height: '100%' }}>
               <p style={{ fontSize: '10px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#bbb', marginBottom: '0.5rem' }}>{p.cat}</p>
               <h3 style={{ fontFamily: "'Palatino Linotype', Palatino, serif", fontSize: '1.05rem', fontWeight: 400, marginBottom: '0.35rem' }}>{p.title}</h3>
               <p style={{ fontSize: '10px', color: '#bbb', marginTop: '0.5rem' }}>{p.stack}</p>

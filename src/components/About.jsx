@@ -15,7 +15,7 @@ export default function About() {
     <section id="about" style={{ padding: '2.5rem', borderTop: '0.5px solid #e0ddd8' }}>
       <p style={{ fontSize: '10px', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '1.25rem', fontWeight:'bolder' }}>About</p>
       <div
-        className="card-hover"
+        className="card-hover about-gridr"
         style={{ border: '0.5px solid #e0ddd8', borderRadius: '4px', padding: '1.5rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}
       >
         <p style={{ fontSize: '13px', lineHeight: 1.85, color: '#666' }}>
