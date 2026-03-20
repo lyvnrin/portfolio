@@ -6,12 +6,12 @@ const projects = [
   }, 
   {
     cat: 'Full-stack · 2026', title: 'Oaxaca', stack: 'React · FastAPI · SQLite',
-    desc: 'Restaurant management system with live order tracking, kitchen + waiter dashboards, and COGS analytics across a 5-sprint Scrum cycle.',
+    desc: 'Restaurant management system with live order tracking, kitchen + waiter dashboards, and COGS analytics across a 5-sprint Scrum cycle. In Progress',
     href: null
   },
   {
     cat: 'Data · 2026', title: 'Lav-oogle', stack: 'Python · NumPy',
-    desc: 'Mini search engine built on PageRank with graph-based link analysis implemented by NumPy matrix operations. Inspired by recent algorithms coursework.',
+    desc: 'Mini search engine built on PageRank with graph-based link analysis implemented by NumPy matrix operations. Inspired by recent algorithms coursework. In Progress',
     href: 'https://lav-oogle.vercel.app/'
   },
 ]
