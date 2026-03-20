@@ -85,7 +85,7 @@ export default function Hero() {
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.9rem', flexWrap: 'wrap' }}>
           <span style={{ border: '0.5px solid #ccc', padding: '2px 9px', borderRadius: '2rem', fontSize: '11px', color: '#888' }}>she / her</span>
           <span style={{ width: 3, height: 3, borderRadius: '50%', background: '#ccc' }} />
-          <span style={{ fontStyle: 'italic', fontSize: '12px', color: '#888' }}>n. computable</span>
+          <span style={{ fontStyle: 'italic', fontSize: '12px', color: '#888' }}>n.</span>
         </div>
         <div style={{ width: '2.5rem', height: '0.5px', background: '#ccc', marginBottom: '0.9rem' }} />
         <p style={{ fontSize: '13px', color: '#888', minHeight: '1.4rem', marginBottom: '1.2rem' }}>
@@ -94,7 +94,8 @@ export default function Hero() {
           <style>{`@keyframes blink { 50% { opacity: 0 } }`}</style>
         </p>
         <p style={{ fontFamily: "'Palatino Linotype', Palatino, serif", fontStyle: 'italic', fontSize: '11.5px', color: '#aaa', lineHeight: 1.75, maxWidth: '480px' }}>
-          <em style={{ fontStyle: 'normal', color: '#888' }}>Etymology:</em> from an ancient root meaning "will figure it out." First observed debugging a FastAPI route at 2am. Known to build things from scratch when the alternative is worse. Chiefly caffeinated.
+          <em style={{ fontStyle: 'normal', color: '#888' }}>Etymology:</em> origin uncertain; associated with clean commits, clear communication, and an instinct for structure in chaotic environments. Observed leading teams, writing code that actually works, and debugging at unreasonable hours. Chiefly collaborative.
+
         </p>
       </div>
     </section>
