@@ -79,8 +79,23 @@ export default function Hero() {
     <section style={{ position: 'relative', minHeight: '95vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '5rem 2.5rem 4rem', overflow: 'hidden' }}>
       <canvas ref={canvasRef} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0.25, pointerEvents: 'none' }} />
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '600px' }}>
-        <h1 style={{ fontFamily: "'Palatino Linotype', Palatino, serif", fontSize: 'clamp(2.4rem,7vw,4.5rem)', fontWeight: 400, letterSpacing: '-0.02em', lineHeight: 1, marginBottom: '1rem' }}>
-          Lavanya Kamble
+        <h1
+          style={{
+            fontFamily: "'Palatino Linotype', Palatino, serif",
+            fontSize: 'clamp(2.4rem,7vw,4.5rem)', fontWeight: 400,
+            letterSpacing: '-0.02em', lineHeight: 1, marginBottom: '1rem',
+            display: 'inline-block', position: 'relative', cursor: 'default'
+          }}>
+          Lavanya Kamble.
+          <span style={{
+            position: 'absolute', bottom: '-4px', left: 0,
+            height: '3px', width: 0, background: '#ee94a7',
+            transition: 'width 0.5s cubic-bezier(0.4, 0, 0.2, 1)', opacity:'75%',
+          }} className="name-underline" />
+          <style>{`
+            h1:hover .name-underline { width: 100% !important; }
+            h1:not(:hover) .name-underline { width: 0 !important; }
+          `}</style>
         </h1>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.9rem', flexWrap: 'wrap' }}>
           <span style={{ border: '0.5px solid #ccc', padding: '2px 9px', borderRadius: '2rem', fontSize: '11px', color: '#888' }}>she / her</span>
