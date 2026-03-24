@@ -87,15 +87,6 @@ export default function Hero() {
             display: 'inline-block', position: 'relative', cursor: 'default'
           }}>
           Lavanya Kamble.
-          <span style={{
-            position: 'absolute', bottom: '-4px', left: 0,
-            height: '3px', width: 0, background: '#ee94a7',
-            transition: 'width 0.5s cubic-bezier(0.4, 0, 0.2, 1)', opacity:'75%',
-          }} className="name-underline" />
-          <style>{`
-            h1:hover .name-underline { width: 100% !important; }
-            h1:not(:hover) .name-underline { width: 0 !important; }
-          `}</style>
         </h1>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.9rem', flexWrap: 'wrap' }}>
           <span style={{ border: '0.5px solid #ccc', padding: '2px 9px', borderRadius: '2rem', fontSize: '11px', color: '#888' }}>she / her</span>
