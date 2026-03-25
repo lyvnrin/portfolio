@@ -2,7 +2,7 @@ const projects = [
   {
     cat: 'Fintech · 2025', title: 'Valora', stack: 'React · Python',
     desc: 'AI-powered financial chatbot delivering economic insights on demand. Includes dynamic charts of stock and revenue data across industries, filtered via dropdown. Contributed frontend.',
-    href: null
+    href: 'https://github.com/lyvnrin/Valora'
   },
   {
     cat: 'Full-stack · 2026', title: 'Oaxaca', stack: 'React · FastAPI · SQLite',
