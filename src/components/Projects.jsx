@@ -7,7 +7,7 @@ const projects = [
   {
     cat: 'Full-stack · 2026', title: 'Oaxaca', stack: 'React · FastAPI · SQLite',
     desc: 'Restaurant management system with live order tracking, kitchen + waiter dashboards, and COGS analytics across a 5-sprint Scrum cycle. In Progress',
-    href: null
+    href: 'https://oaxaca-mu.vercel.app/'
   },
   {
     cat: 'Data · 2026', title: 'Lav-oogle', stack: 'Python · NumPy',
