@@ -81,7 +81,7 @@ export default function Hero() {
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '600px' }}>
         <h1
           style={{
-            fontFamily: "'Palatino Linotype', Palatino, serif",
+            fontFamily: "'Playfair Display', serif",
             fontSize: 'clamp(2.4rem,7vw,4.5rem)', fontWeight: 400,
             letterSpacing: '-0.02em', lineHeight: 1, marginBottom: '1rem',
             display: 'inline-block', position: 'relative', cursor: 'default'
@@ -101,8 +101,15 @@ export default function Hero() {
         </p>
         <p style={{ fontFamily: "'Palatino Linotype', Palatino, serif", fontStyle: 'italic', fontSize: '11.5px', color: '#aaa', lineHeight: 1.75, maxWidth: '480px' }}>
           <em style={{ fontStyle: 'normal', color: '#888' }}>Etymology:</em> origin uncertain; associated with clean commits, clear communication, and an instinct for structure in chaotic environments. Observed leading teams, writing code that actually works, and debugging at unreasonable hours. Chiefly collaborative.
-
         </p>
+
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginTop: '1.5rem' }}>
+          <div style={{ height: '0.5px', width: '2rem', background: '#ddd' }} />
+          <span style={{ fontSize: '10px', letterSpacing: '0.12em', color: '#bbb', textTransform: 'uppercase' }}>
+            London, England · Vol. I
+          </span>
+          <div style={{ height: '0.5px', width: '2rem', background: '#ddd' }} />
+        </div>
       </div>
     </section>
   )
