@@ -7,6 +7,7 @@ export default function Contact() {
           { label: 'cv', href: '/Lavanya_Kamble_CV.pdf' },
           { label: 'linkedin', href: 'https://www.linkedin.com/in/lavanyakamble/' },
           { label: 'github', href: 'https://github.com/lyvnrin' },
+          { label: 'notion', href: 'https://lavanya-k-portfolio.notion.site/Welcome-to-My-Portfolio-303e4dd70aaf80499338ee34e86937a6'}
         ].map(l => (
           <a key={l.label} href={l.href}
             target="_blank" rel="noopener noreferrer"
