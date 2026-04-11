@@ -100,7 +100,7 @@ export default function Hero() {
           <style>{`@keyframes blink { 50% { opacity: 0 } }`}</style>
         </p>
         <p style={{ fontFamily: "'Palatino Linotype', Palatino, serif", fontStyle: 'italic', fontSize: '11.5px', color: '#aaa', lineHeight: 1.75, maxWidth: '480px' }}>
-          <em style={{ fontStyle: 'normal', color: '#888' }}>Etymology:</em> origin uncertain; associated with clean commits, clear communication, and an instinct for structure in chaotic environments. Observed leading teams, writing code that actually works, and debugging at unreasonable hours. Chiefly collaborative.
+          <em style={{ fontStyle: 'normal', color: '#888' }}>Etymology:</em> origin uncertain; documented at the intersection of systems and data. Associated with structured thinking, clear communication, and a tendency to lead when the situation calls for it. Known to deliver under pressure. Chiefly collaborative.
         </p>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginTop: '1.5rem' }}>
