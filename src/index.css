@@ -13,13 +13,8 @@ body {
   overflow-x: hidden;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
-* {
-  scrollbar-width: none;
-}
+::-webkit-scrollbar { display: none; }
+* { scrollbar-width: none; }
 
 a { color: inherit; text-decoration: none; }
 
@@ -32,18 +27,6 @@ a { color: inherit; text-decoration: none; }
 .card-hover:hover {
   transform: translate(-3px, -3px);
   box-shadow: 6px 6px 6px var(--accent);
-}
-
-@media (max-width: 768px) {
-  .about-grid {
-    grid-template-columns: 1fr !important;
-  }
-  .projects-grid {
-    grid-template-columns: 1fr !important;
-  }
-  .hero-section {
-    padding: 3rem 0 2rem !important;
-  }
 }
 
 .drop-cap::first-letter {
@@ -70,4 +53,63 @@ a { color: inherit; text-decoration: none; }
   flex: 1;
   height: 0.5px;
   background: #e0ddd8;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .hero-section {
+    padding: 3rem 0 2rem !important;
+  }
+
+  /* ABOUT CARDS */
+  .about-grid > div[style*="width: 0.5px"] {
+    display: none;
+  }
+
+  /* PAGE PADDING */
+  #root > div {
+    padding: 0 1.25rem !important;
+  }
+
+  /* NAV */
+  nav {
+    padding: 0.85rem 1.25rem !important;
+  }
+
+  /* HERO */
+  h1 {
+    font-size: clamp(2rem, 11vw, 3.5rem) !important;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 2rem 0 !important;
+  }
+
+  .card-hover:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* footer */
+  footer {
+    flex-direction: column !important;
+    gap: 0.4rem;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: clamp(1.8rem, 12vw, 2.8rem) !important;
+  }
+
+  .drop-cap::first-letter {
+    font-size: 2.4em;
+  }
 }
