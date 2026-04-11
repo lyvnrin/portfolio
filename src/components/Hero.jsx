@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
 
 const phrases = [
-  'computer science student.',
+  'penultimate year cs student.',
+  'open to Summer 2026 internships.',
   'full-stack developer.',
-  'data analyst interest.',
-  'pattern finder.',
-  'chaos enjoyer.',
+  'aspiring data analyst.',
+  'fintech curious.',
+  'chaos theory enthusiast.',
   'scrum master (retired).',
+  'systems thinker'
 ]
 
 export default function Hero() {

@@ -2,6 +2,7 @@ const skills = [
   { name: 'Python' },
   { name: 'React' },
   { name: 'Git' },
+  { name: 'PostgreSQL' },
   { name: 'FastAPI' },
   { name: 'Java' },
   { name: 'JavaScript' },
@@ -18,8 +19,8 @@ export default function About() {
         className="card-hover about-grid"
         style={{ border: '0.5px solid #e0ddd8', padding: '1.5rem', display: 'grid', gridTemplateColumns: '1fr 0.5px 1fr', gap: '1.5rem', alignItems: 'start' }}
       >
-        <p className="drop-cap" style={{ fontSize: '13px', lineHeight: 1.85, color: '#666' }}>
-          Undergraduate CS student at Royal Holloway, University of London. I build full-stack systems, analyse data, and find patterns in chaotic things. Currently looking for Summer 2026 internships in fintech and data.
+        <p className="drop-cap" style={{ fontSize: '12px', lineHeight: 1.85, color: '#666' }}>
+          Undergraduate Computer Science student at Royal Holloway, University of London. I build full-stack systems, analyse data, and find patterns in complexity. Always up for a new challenge and quick to pick up whatever language or tool the problem demands. Currently seeking Summer 2026 internships in fintech and data.
         </p>
         <div style={{ background: '#e0ddd8', width: '0.5px', height: '100%' }} />
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', alignContent: 'flex-start' }}>
