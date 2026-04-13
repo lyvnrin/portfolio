@@ -8,22 +8,22 @@ const projects = [
   },
   {
     cat: 'Full-stack · 2026', title: 'Oaxaca', stack: 'React · FastAPI · SQLite',
-    desc: 'Restaurant management system with live order tracking; kitchen, manager, waiter dashboards; and COGS analytics across a 5-sprint Scrum cycle. Completed development. In progress - backend deployment.',
+    desc: 'Restaurant management system with live order tracking; kitchen, manager, waiter dashboards; and COGS analytics across a 5-sprint Scrum cycle. Completed development.',
     href: 'https://github.com/lyvnrin/oaxaca'
   },
   {
     cat: 'Algorithms · 2026', title: 'Sort It Out.', stack: 'React · JavaScript',
-    desc: 'Interactive visualiser for Bubble, Merge, Quicksort & Insertion Sort - animated bar chart, speed control, and a tabbed revision sheet. Completed.',
+    desc: 'Interactive visualiser for Bubble, Merge, Quicksort & Insertion Sort - animated bar chart, speed control, and a tabbed revision sheet.',
     href: 'https://sorting-visualiser-lk.vercel.app/'
   },
   {
     cat: 'Data · 2026', title: 'Lav-oogle', stack: 'Python · NumPy',
-    desc: 'Mini search engine built on PageRank with graph-based link analysis implemented by NumPy matrix operations. Inspired by recent algorithms coursework. Completed development. In progress - backend deployment.',
+    desc: 'Mini search engine built on PageRank with graph-based link analysis implemented by NumPy matrix operations. Inspired by recent algorithms coursework. Completed development.',
     href: 'https://github.com/lyvnrin/mini-search-engine'
   },
   {
   cat: 'Data · 2026', title: 'The House Always Wins?', stack: 'Python · Pandas · Matplotlib · Jupyter',
-  desc: 'Monte Carlo simulation of blackjack, baccarat, and poker exploring whether single-player tables and AI automation increase casino profitability. In progress - development',
+  desc: 'Monte Carlo simulation of blackjack, baccarat, and poker exploring whether single-player tables and AI automation increase casino profitability. In Progress.',
   href: 'https://github.com/lyvnrin/casino-sim'
   },
 ]
