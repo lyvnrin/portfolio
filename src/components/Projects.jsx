@@ -64,7 +64,7 @@ export default function Projects() {
               style={{ color: '#bbb', borderBottom: '0.5px solid #ddd' }}
               onMouseEnter={e => { e.target.style.color = 'var(--accent)'; e.target.style.borderBottomColor = 'var(--accent)' }}
               onMouseLeave={e => { e.target.style.color = '#bbb'; e.target.style.borderBottomColor = '#ddd' }}>
-              my notion
+              my notion site
             </a>
           </p>
         </div>
