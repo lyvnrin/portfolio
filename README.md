@@ -1,6 +1,6 @@
-# portfolio
+# Main Portfolio
 
-Personal portfolio site — [lavanyakamble.vercel.app](https://lavanyakamble.vercel.app)
+Personal portfolio site - [lavanyakamble.vercel.app](https://lavanyakamble.vercel.app)
 
 ## Stack
 
